@@ -1,0 +1,43 @@
+@mixin placeholder($color: #000000) {
+    &::-webkit-input-placeholder {
+    color: $color;
+  }
+  
+    &::-moz-placeholder {
+      color: $color;
+    }
+  
+    &:-ms-input-placeholder {
+      color: $color;
+    }
+  
+    &:-moz-placeholder {
+      color: $color;
+    }
+  
+  }
+
+  // adaptive
+  @mixin desktop {
+    @media screen and (max-width: 1190px){
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media screen and (max-width: 1023px){
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 767px){
+      @content;
+    }
+  }
+  
+  @mixin phone {
+    @media screen and (max-width: 479px){
+      @content;
+    }
+  }

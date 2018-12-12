@@ -36,6 +36,10 @@ input::-ms-clear {
   display: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 @import "mixins";
 @import "common/a__intro";
 @import "common/b__danger";
@@ -96,6 +100,12 @@ input::-ms-clear {
   }
   &_italic {
     font-style: italic;
+  }
+}
+
+.color-text {
+  &_black {
+    color: #000;
   }
 }
 

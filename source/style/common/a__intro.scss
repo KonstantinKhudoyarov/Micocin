@@ -1,3 +1,18 @@
+/*header*/
+
+.intro__header {
+  padding-top: 14px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 120px;
+}
+
 .logo__pic {
   width: 81px;
   height: 56px;
@@ -5,4 +20,101 @@
 
 .logo__img {
   max-width: 100%;
+  display: block;
+}
+
+.logo__name {
+  margin-left: 17px;
+  font-size: 22px;
+  color: #383334;
+}
+
+.intro__header-list {
+  width: 647px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro__header-item {
+  display: flex;
+}
+
+.intro__header-desc {
+  margin-left: 12px;
+  font-size: 16px;
+  color: #666666;
+}
+
+/*main*/
+.intro__product {
+  position: relative;
+  width: 471px;
+  padding-top: 40px;
+}
+
+.intro__product-legs {
+  position: absolute;
+  z-index: 2;
+  top: -120px;
+  left: -215px;
+}
+
+.intro__product-pic {
+  position: relative;
+  z-index: 1;
+  left: -99px;
+  width: 571px;
+  height: 571px;
+}
+
+.intro__product-img {
+  max-width: 100%;
+  display: block;
+}
+
+.intro__pack {
+  position: absolute;
+  z-index: 3;
+  top: 367px;
+  left: -42px;
+}
+
+.intro__pack-img {
+  display: block;
+}
+
+.intro__pack-tablets {
+  position: relative;
+}
+
+.intro__pack-img_tablets {
+  position: absolute;
+  bottom: -58px;
+  left: -50px;
+}
+
+.intro__pack-img_gel {
+  position: absolute;
+  top: 134px;
+  left: 106px;
+}
+
+.intro__pack-img_stick {
+  position: absolute;
+  top: 207px;
+  left: 247px;
+}
+
+.intro__desc {
+  max-width: 373px;
+}
+
+.intro__title {
+  font-size: 44px;
+  color: #383334;
+}
+
+.intro__title-small {
+  font-size: 34px;
 }

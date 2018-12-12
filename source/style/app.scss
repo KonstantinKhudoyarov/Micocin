@@ -36,24 +36,21 @@ input::-ms-clear {
   display: none;
 }
 
-::-webkit-input-placeholder { color: #333333; font-size: 16px; }
-::-moz-placeholder          { color: #333333; font-size: 16px; }
-:-moz-placeholder           { color: #333333; font-size: 16px; }
-:-ms-input-placeholder      { color: #333333; font-size: 16px; }
-
 @import "mixins";
-@import "common/a__header";
-@import "common/b__history";
-@import "common/c__today";
-@import "common/d__feel";
-@import "common/e__effect";
-@import "common/f__expert";
-@import "common/g__reviews";
-@import "common/h__reciept";
-@import "common/i__footer";
-@import "common/popup.scss";
-@import "common/slick.scss";
-@import "common/slick-theme.scss";
+@import "common/a__intro";
+@import "common/b__danger";
+@import "common/c__inefficient";
+@import "common/d__description";
+@import "common/e__complex";
+@import "common/f__recommendation";
+@import "common/g__composition";
+@import "common/h__use";
+@import "common/i__reviews";
+@import "common/j__delivery";
+@import "common/k__intro-bottom";
+@import "common/popup";
+@import "common/slick";
+@import "common/slick-theme";
 
 .container {
   max-width: 1170px;
@@ -112,7 +109,7 @@ input::-ms-clear {
     position: absolute;
     top: -83px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     width: 92px;
     height: 65px;
     background: url('../img/section-decor.png') no-repeat 0 0;

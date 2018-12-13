@@ -1,11 +1,261 @@
-// .danger {
-//   &-title {
-//     margin-bottom: 35px;
-//   }
-//   &-slogan {
-//     text-align: center;
-//     color: #2b2828;
-//     font-size: 24px;
-//     font-weight: 700;
-//   }
-// }
+.danger {
+  &-title {
+    margin-bottom: 30px;
+  }
+  &-slogan {
+    text-align: center;
+    color: #2b2828;
+    font-size: 24px;
+    margin-bottom: 47px;
+  }
+  &-wrap {
+    display: flex;
+    counter-reset: section;
+    margin-bottom: 70px;
+  }
+  &-item {
+    margin-right: 50px;
+    width: 33%;
+    &:hover {
+      .danger-item__descr {
+        &:before {
+          background: #f4d3bb;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .danger-number {
+        background-color: #e47643;
+      }
+      svg.circle {
+        stroke: #e47643;
+      }
+    }
+    &:nth-child(3) {
+      .danger-number {
+        background-color: #ec5b19;
+      }
+      svg.circle {
+        stroke: #ec5b19;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 45px;
+    }
+    &__text {
+      margin-left: 20px;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+    &__descr {
+      position: relative;
+      color: #444444;
+      font-size: 18px;
+      line-height: 1.5;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -18px;
+        left: 0;
+        height: 3px;
+        width: 50px;
+        background: #becbd8;
+      }
+    }
+  }
+  svg.circle {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: #ec9a6a;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 170, 470;
+    animation-name: danger-circle;
+    animation-duration: 2s;
+  }
+  &-number {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #ec9a6a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    &:after {
+      content: counter(section);
+      counter-increment: section;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+  &-img {
+    position: relative;
+    flex: none;
+    &__circle {
+      position: absolute;
+      left: -22px;
+      top: -25px;
+      width: 212px;
+      height: 212px;
+      transform: rotate(170deg);
+    }
+  }
+  &-stat {
+    position: relative;
+    border: 3px solid #f4d3bb;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px 10px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: url(../img/danger-stat.svg) no-repeat center center;
+      width: 55px;
+      height: 37px;
+      z-index: 3;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 170px;
+      height: 10px;
+      background: #fff;
+      z-index: 2;
+    }
+    &__text {
+      color: #444444;
+      font-size: 22px;
+    }
+  }
+}
+
+@keyframes danger-circle {
+  0%   {
+    stroke-dasharray: 0, 640;
+  }
+  100% {
+    stroke-dasharray: 170, 470;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  .danger-wrap {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1189px) {
+  .danger {
+    &-img {
+      width: 150px;
+      &__circle {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &-number {
+      top: -20px;
+      width: 45px;
+      height: 45px;
+      &:after {
+        font-size: 26px;
+      }
+    }
+    &-item {
+      margin-right: 35px;
+      &__text {
+        margin-left: 10px;
+      }
+      &__descr {
+        font-size: 17px;
+      }
+    }
+    &-stat {
+      &__text {
+        font-size: 21px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .danger {
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-slogan {
+      line-height: 1;
+    }
+    &-wrap {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    &-item {
+      margin-right: 15px;
+      &__content {
+        flex-direction: column;
+        margin-bottom: 25px;
+      }
+      &__text {
+        font-size: 20px;
+        margin: 10px 0 0;
+      }
+      &__descr {
+        font-size: 16px;
+        br {
+          display: none;
+        }
+        &:before {
+          top: -13px;
+        }
+      }
+    }
+    &-img {
+      &__circle {
+        left: -25px;
+      }
+    }
+    &-stat {
+      padding: 30px 10px;
+      &__text {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .danger {
+    &-wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-item {
+      width: calc(50% - 20px);
+      margin: 0 10px 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-stat {
+      &__text {
+        font-size: 18px;
+      }
+    }
+  }
+}

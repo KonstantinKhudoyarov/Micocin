@@ -11,12 +11,37 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
+
+  @include laptop {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  @include phone {
+    margin-bottom: 5px;
+  }
+
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 120px;
+  margin-right: 88px;
+
+  @include desktop {
+    margin-right: 45px;
+  }
+
+  @include laptop {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
 }
 
 .logo__pic {
@@ -40,6 +65,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 21px;
+
+  @include laptop {
+    margin-right: 0;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
 }
 
 .intro__header-item {
@@ -56,12 +91,26 @@
 .intro__main {
   display: flex;
   justify-content: space-between;
+
+    @include laptop {
+      flex-direction: column;
+    }
+
 }
 
 .intro__product {
   position: relative;
   width: 471px;
   padding-top: 40px;
+
+  @include desktop {
+    width: 344px;
+  }
+
+  @include laptop {
+    display: none;
+  }
+
 }
 
 .intro__product-legs {
@@ -70,6 +119,11 @@
   top: -120px;
   left: -215px;
   max-width: none;
+
+  @include desktop {
+    width: 570px;
+  }
+
 }
 
 .intro__product-pic {
@@ -78,6 +132,35 @@
   left: -99px;
   width: 571px;
   height: 571px;
+
+  @include desktop {
+    width: 445px;
+    height: 445px;
+  }
+
+}
+
+.intro__circle {
+  position: absolute;
+  top: -56px;
+  left: 37px;
+  width: 571px;
+  height: 571px;
+  transform: rotate(90deg);
+
+  @include desktop {
+    display: none;
+  }
+
+}
+
+.intro__circle-img {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 6;
+  stroke-dasharray: 293, 440;
+  width: 700px;
+  height: 700px;
 }
 
 .intro__product-img {
@@ -89,7 +172,40 @@
   position: absolute;
   z-index: 3;
   top: 367px;
-  left: -42px;
+  left: -941px;
+  
+  @include desktop-big {
+    top: 367px;
+    left: -884px;
+  }
+
+  @include desktop {
+    top: 380px;
+    left: -737px;
+  }
+
+  @include laptop {
+    position: relative;
+    top: 0;
+    left: 0;
+    align-self: center;
+    background: #fff;
+    min-height: 285px;
+    padding: 20px 10px 45px 15px;
+    border: 4px solid #a8ca3f;
+    border-radius: 10px;
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include phone {
+    min-height: 200px;
+    padding: 20px 0px 5px 15px;
+    margin-bottom: 10px;
+    width: 300px;
+  }
 
   &::after {
     content: '';
@@ -101,6 +217,11 @@
     width: 313px;
     height: 232px;
     background: url('../img/pack-decor.png') 0 0 no-repeat;
+
+    @include desktop-big {
+      display: none;
+    }
+
   }
 
 }
@@ -111,6 +232,15 @@
 
 .intro__pack-tablets {
   position: relative;
+
+  @include desktop {
+    width: calc(378px - 35%);
+  }
+
+  @include phone {
+    width: calc(378px - 65%);
+  }
+
 }
 
 .intro__pack-label {
@@ -118,13 +248,21 @@
   top: -11px;
   right: -12px;
   width: 100px;
-  padding: 6px 0;
+  padding: 3px 0 0 3px;
   font-size: 34px;
   line-height: 1;
   text-align: center;
   color: #fff;
   background-color: #ff6b00;
   border-radius: 8px;
+
+  @include phone {
+    width: 75px;
+    padding: 2px 0 0 3px;
+    font-size: 25px;
+    border-radius: 5px;
+  }
+
 }
 
 .intro__pack-label_island {
@@ -133,10 +271,26 @@
   right: 33px;
 }
 
+.intro__pacl-currency {
+  font-weight: normal;
+}
+
 .intro__pack-img_tablets {
   position: absolute;
   bottom: -58px;
   left: -50px;
+
+  @include desktop {
+    width: calc(186px - 25%);
+    bottom: -42px;
+    left: -10px;
+  }
+
+  @include phone {
+    width: calc(186px - 45%);
+    bottom: -30px;
+  }
+
 }
 
 .intro__pack-gel {
@@ -144,28 +298,108 @@
   top: 134px;
   left: 106px;
   max-width: none;
+
+  @include desktop {
+    width: calc(421px - 37%);
+    top: 79px;
+    left: 81px;
+  }
+
+  @include laptop {
+    top: 130px;
+    left: 95px;
+  }
+
+  @include phone {
+    width: calc(421px - 85%);
+    top: 90px;
+    left: 85px;
+  }
+
 }
 
 .intro__pack-img_gel {
-  max-width: none;;
+  max-width: none;
+
+  @include desktop {
+    width: 100%;
+  }
+
 }
 
 .intro__pack-img_stick {
   position: absolute;
   top: 207px;
   left: 247px;
+
+  @include desktop {
+    width: calc(339px - 37%);
+    top: 130px;
+    left: 180px;
+  }
+
+  @include laptop {
+    top: 190px;
+    left: 190px;
+  }
+
+  @include phone {
+    width: calc(339px - 75%);
+    top: 128px;
+    left: 150px;
+  }
+
 }
 
 .intro__desc {
   max-width: 373px;
+
+  @include laptop {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
 }
 
 .intro__title {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   max-width: 305px;
   font-size: 44px;
   color: #383334;
   line-height: 1;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+
+  @include laptop {
+    max-width: none;
+    width: 700px;
+    font-size: 39px;
+    text-align: center;
+    margin: 0 auto 25px;
+  }
+
+  @include tablet {
+    font-size: 34px;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+}
+
+.intro__desc-list {
+
+  @include laptop {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include tablet {
+    display: block;
+  }
+
 }
 
 .intro__desc-item {
@@ -173,6 +407,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1;
+
+  @include laptop {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
 
   &:first-child {
 
@@ -185,6 +429,15 @@
       width: 9px;
       height: 31px;
       background: url('../img/intro-list-arrow-way.png') 0 0 no-repeat;
+
+      @include desktop {
+        bottom: -32px;
+      }
+
+      @include laptop {
+        display: none;
+      }
+
     }
 
   }
@@ -200,6 +453,15 @@
       width: 9px;
       height: 40px;
       background: url('../img/intro-list-arrow-sequel.png') 0 0 no-repeat;
+
+      @include desktop {
+        bottom: -44px;
+      }
+
+      @include laptop {
+        display: none;
+      }
+
     }
 
   }
@@ -213,7 +475,20 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 42px;
+    margin-bottom: 39px;
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
   }
 
 }
@@ -230,16 +505,56 @@
   color: #fff;
   font-size: 20px;
   box-shadow: 0 0 0 7px #e8edc9;
+
+  @include laptop {
+    margin: 0 0 10px 0;
+  }
+
+  @include tablet {
+    margin: 0 20px 0 0;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    box-shadow: 0 0 0 5px #e8edc9;
+  }
+
 }
 
 .intro__title-small {
   font-size: 34px;
+
+  @include laptop {
+    font-size: 29px;
+  }
+
 }
 
 .intro__desc-text {
   width: 290px;
   font-size: 20px;
   color: #444444;
+  line-height: 1.1;
+
+  @include laptop {
+    width: 250px;
+    font-size: 16px;
+  }
+
+}
+
+.intro__form {
+  position: relative;
+
+  @include laptop {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 .form {
@@ -252,30 +567,19 @@
   &::before {
     content: '';
     position: absolute;
-    top: 168px;
-    right: -37px; 
+    top: 162px;
+    right: -34px; 
     display: block;
     width: 49px;
     height: 233px;
     background: url('../img/form-arrow.png') 0 0 no-repeat;
+
+    @include desktop-big {
+      display: none;
+    }
+
   }
 
-}
-
-.intro__delivery {
-  position: absolute;
-  top: -7px;;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  padding: 0 0 13px 0;
-  text-align: center;
-  background-color: #f3f9ff;
-  border-left: 7px solid #a8ca3f;
-  border-right: 7px solid #a8ca3f;
-  border-bottom: 7px solid #a8ca3f;
-  border-bottom-right-radius: 14px;
-  border-bottom-left-radius: 14px;
 }
 
 .intro__delivery-icon {
@@ -291,7 +595,7 @@
 }
 
 .form__wrap {
-  padding: 49px 18px 0;
+  padding: 20px 18px 0;
 }
 
 .form__title {
@@ -373,7 +677,7 @@
 .form__main-input {
   display: block;
   width: 100%;
-  padding: 25px 25px 25px 55px;
+  padding: 25px 25px 20px 55px;
   background-color: #eef2f7;
   background-position: 21px 50%;
   background-repeat: no-repeat;
@@ -430,6 +734,7 @@
   margin-bottom: 15px;
   font-size: 18px;
   text-align: center;
+  line-height: 1;
 }
 
 .form__lastpack-accent {
@@ -437,7 +742,7 @@
 }
 
 .form__security {
-  padding: 11px 0 13px;
+  padding: 13px 0;
   font-size: 14px;
   color: #666666;
   vertical-align: middle;
@@ -451,4 +756,3 @@
   margin-right: 6px;
   vertical-align: middle;
 }
-

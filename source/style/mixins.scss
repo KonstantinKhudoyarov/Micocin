@@ -22,8 +22,14 @@
   }
 
   // adaptive
+  @mixin desktop-big {
+    @media screen and (max-width: 1350px) {
+      @content;
+    }
+  }
+
   @mixin desktop {
-    @media screen and (max-width: 1190px){
+    @media screen and (max-width: 1199px){
       @content;
     }
   }

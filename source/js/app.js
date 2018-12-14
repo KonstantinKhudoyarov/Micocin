@@ -1,10 +1,4 @@
-$(function(){
-    $('.today-navigation a').click(function(){
-        $(this).parents('.today-tabs').find('.today-wrap').addClass('hide');
-        $(this).parent().siblings().removeClass('active');
-        var id = $(this).attr('href');
-        $(id).removeClass('hide');
-        $(this).parent().addClass('active');
-        return false
-    });
-});
+var addInefficientClass = function () {
+    $(this).parents('.inefficient-item').toggleClass('active').siblings().removeClass("active");;
+}
+$(document).on('click', '.js-add-inefficient-class', addInefficientClass);

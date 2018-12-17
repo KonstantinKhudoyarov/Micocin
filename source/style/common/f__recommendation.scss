@@ -1,0 +1,148 @@
+.recommendation.block {
+    padding-bottom: 0;
+    background-color: #f3f9ff;
+}
+
+.recommendation__title {
+    margin-bottom: 48px;
+}
+
+.recommendation__subtitle {
+    display: block;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #383334;
+    letter-spacing: -1px;
+}
+
+.recommendation__wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.recommendation__doc {
+
+    @include laptop {
+        align-self: flex-end;
+    }
+}
+
+.recommendation__pic {
+    position: relative;
+    z-index: 1;
+    max-width: 530px;
+    align-self: flex-end;
+
+    @include laptop {
+        max-width: 450px;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.recommendation__circle {
+    position: absolute;
+    top: 44px;
+    left: -92px;
+    z-index: -1;
+    transform: rotate(90deg);
+
+    @include laptop {
+        display: none;
+    }
+
+}
+
+.recommendation__circle-img {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 7;
+    stroke-dasharray: 250, 440;
+    width: 700px;
+    height: 700px;
+  }
+
+.recommendation__desc {
+    width: 540px;
+
+    @include desktop {
+        max-width: 440px;
+    }
+
+    @include laptop {
+        padding-left: 10px;
+    }
+
+    @include tablet {
+        padding-left: 0;
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.recommendation__desc-title {
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    letter-spacing: -1px;
+
+    @include desktop {
+        font-size: 20px;
+    }
+
+    @include laptop {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    @include phone {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #a7c93d;
+    }
+
+}
+
+.recommendation__text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444444;
+
+    @include desktop {
+        font-size: 17px;
+    }
+
+    @include laptop {
+        font-size: 16px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include desktop {
+            margin-bottom: 25px;
+        }
+
+        @include laptop {
+            margin-bottom: 15px;
+        }
+
+        @include phone {
+            margin-bottom: 10px;
+        }
+    }
+
+}

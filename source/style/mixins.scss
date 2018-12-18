@@ -45,6 +45,12 @@
       @content;
     }
   }
+
+  @mixin big-phone {
+    @media screen and (max-width: 605px){
+      @content;
+    }
+  }
   
   @mixin phone {
     @media screen and (max-width: 479px){

@@ -1,0 +1,290 @@
+.title.composition__title {
+    max-width: 780px;
+    margin: 0 auto;
+    color: #383334;
+    line-height: 1;
+
+    @include laptop {
+        width: 100%;
+    }
+}
+
+.composition__wrap {
+    display: flex;
+    margin-top: 40px;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.composition__section {
+    width: 50%;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    &:first-child {
+        padding-right: 45px;
+
+        @include desktop {
+            padding-right: 20px;
+        }
+
+        @include laptop {
+            padding-right: 10px;
+        }
+
+        @include tablet {
+            padding-right: 0;
+        }
+    }
+
+    &:last-child {
+        position: relative;
+        padding-left: 45px;
+
+        @include desktop {
+            padding-left: 20px;
+        }
+
+        @include laptop {
+            padding-left: 10px;
+        }
+
+        @include tablet {
+            padding-left: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 30px;
+            bottom: 50px;
+            display: block;
+            width: 1px;
+            background-color: #d2dce6;
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}
+
+.composition__wrap-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 80px;
+    padding: 0 33px 0 0;
+    margin-bottom: 24px;
+
+    @include laptop {
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+
+    @include tablet {
+        padding: 0;
+    }
+}
+
+.composition__subtitle {
+    font-size: 22px;
+    color: #383334;
+
+    @include laptop {
+        font-size: 20px;
+    }
+}
+
+.composition__pack_gel {
+    width: 117px;
+    margin-right: 23px;
+}
+
+.composition__pack_tablets {
+    width: 83px;
+    margin-left: 22px;
+
+    @include tablet {
+        margin-left: 0;
+        margin-right: 22px;
+    }
+}
+
+.composition__item {
+    display: flex;
+    justify-content: space-between;
+    min-height: 180px;
+
+    @include laptop {
+        min-height: 155px;
+    }
+
+    @include tablet {
+        justify-content: space-evenly;
+    }
+
+    &:not(:last-child) {
+
+        .composition__item-text {
+            // padding-bottom: 26px;
+            // border-bottom: 1px solid #d2dce6;
+
+            // @include laptop {
+            //     padding-bottom: 15px;
+            // }
+        }
+        .composition__desc {
+            border-bottom: 1px solid #d2dce6;
+        }
+    }
+}
+
+.composition__desc {
+    width: 334px;
+
+    @include desktop {
+        width: 320px;
+    }
+
+    @include laptop {
+        width: 300px;
+        padding: 0 0 0 5px;
+    }
+
+    @include tablet {
+        width: 400px;
+    }
+}
+
+.composition__item-title {
+    margin-bottom: 17px;
+    font-size: 20px;
+    color: #0f0f0f;
+    font-weight: 500;
+
+    @include laptop {
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+}
+
+.composition__item-text {
+    font-size: 18px;
+    color: #444;
+
+    @include desktop {
+        font-size: 17px;
+    }
+
+    @include laptop {
+        font-size: 16px;
+    }
+}
+
+.composition__item-pic {
+    width: 175px;
+
+    @include desktop {
+        width: 160px;
+    }
+
+
+}
+
+.composition__item-pic_margined {
+    margin-top: -30px;
+}
+
+.composition__section_gel {
+
+    .composition__item {
+
+        @include tablet {
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+        }
+    }
+
+    .composition__desc {
+        text-align: right;
+
+        @include laptop {
+            padding: 0 5px 0 0;
+        }
+
+        @include tablet{
+            padding: 0 0 0 10px;
+            text-align: left;
+        }
+    }
+
+}
+
+.composition__section_tablets {
+
+    .composition__item {
+        flex-direction: row-reverse;
+    }
+
+    .composition__wrap-title {
+        justify-content: flex-start;
+        padding: 0 0 0 45px;
+
+        @include tablet {
+            padding: 0;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    }
+
+}
+
+.composition__footnote {
+    position: relative;
+    padding: 39px 38px 28px 42px;
+    margin-top: 21px;
+    border: 2px solid #d2dce6;
+    text-align: center;
+    border-radius: 9px;
+
+    @include tablet {
+        padding: 25px 5px 10px 5px;
+        margin-top: 5px;
+    }
+}
+
+.composition__wrap-pic {
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 55px 0 48px;
+    background-color: #fff;
+}
+
+.composition__footnote-pic {
+    width: 67px;
+}
+
+.composition__text {
+    font-size: 21px;
+    color: #444444;
+
+    @include desktop {
+        font-size: 19px;
+    }
+
+    @include laptop {
+        font-size: 17px;
+    }
+
+    @include tablet {
+        font-size: 16px;
+    }
+}

@@ -699,36 +699,7 @@
   background-image: url('../img/form-tel.svg');
 }
 
-.form__main-btn {
-  width: 100%;
-  margin: 15px 0 20px;
-  padding: 5px;
-  background: rgb(255,190,2);
-  background: linear-gradient(to right, rgba(255,190,2,1) 0%,rgba(255,204,2,1) 100%);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: .2s;
 
-  &:hover {
-    box-shadow: 0 0 15px 5px #ffd34a;
-  }
-
-}
-
-.form__btn {
-  display: block;
-  padding: 9px 39px 6px 41px;
-  font-size: 28px;
-  line-height: 0.6;
-  background-color: transparent;
-  border: 3px solid #ffd24e;
-  border-radius: 100px;
-}
-
-.form__main-btn-small {
-  font-size: 16px;
-  line-height: 1;
-}
 
 .form__lastpack {
   margin-bottom: 15px;

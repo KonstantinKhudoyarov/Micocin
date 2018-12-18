@@ -1,0 +1,155 @@
+.delivery {
+    counter-reset: bullet;
+}
+
+.delivery__title {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #383334;
+
+    &.title {
+        line-height: 1;
+    }
+}
+
+.delivery__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 39px;
+
+    @include laptop {
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include big-phone {
+        margin-top: 15px;
+    }
+}
+
+.delivery__item {
+    width: 293px;
+
+    &:last-child {
+
+        @include tablet {
+            margin-top: 20px;
+        }
+    }
+
+    &:not(:first-child) {
+
+        @include big-phone {
+            margin-top: 20px;
+        }
+    }
+}
+
+.delivery__item_centered {
+    
+    .delivery__pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .delivery__img {
+
+        @include desktop {
+            width: 156px;
+            height: 164px;
+        }
+    }
+
+}
+
+.delivery__pic {
+    position: relative;
+    max-width: 284px;
+    height: 284px;
+    margin: 0 auto 25px;
+    border: 17px solid #dfe8f1;
+    border-radius: 50%;
+
+    @include desktop {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    @include laptop {
+        max-width: 245px;
+        height: 245px;
+    }
+
+    @include big-phone {
+        margin: 0 auto 13px;
+    }
+
+    &::before {
+        counter-increment: bullet;
+        content: counter(bullet);
+        position: absolute;
+        top: -17px;
+        right: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border: 6px solid #e2eec6;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #a7c93d;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -42px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: #a7c93d;
+
+        @include big-phone {
+            bottom: -30px;
+        }
+    }
+}
+
+.delivery__pointer {
+    margin-top: 126px;
+
+    @include laptop {
+        display: none;
+    }
+}
+
+.delivery__item-title {
+    padding-top: 14px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    text-align: center;
+
+    @include big-phone {
+        padding-top: 5px;
+        margin-bottom: 0;
+    }
+}
+
+.delivery__desc {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+}

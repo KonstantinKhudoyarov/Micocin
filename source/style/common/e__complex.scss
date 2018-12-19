@@ -9,12 +9,20 @@
     width: 100%;
     height: 109px;
     background: url('../img/wave-top.png') 0 0 no-repeat;
+
+    @include tablet {
+      display: none;
+    }
   }
 
 }
 
 .block.complex {
   padding-top: 20px;
+
+  @include laptop {
+    padding-top: 0;
+  }
 }
 
 .complex-title {

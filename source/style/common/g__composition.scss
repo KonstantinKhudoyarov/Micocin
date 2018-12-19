@@ -1,3 +1,44 @@
+.composition {
+
+    .container {
+
+        @include desktop {
+            max-width: 1020px;
+        }
+
+        @include laptop {
+            max-width: 760px;
+        }
+
+        @include tablet {
+            max-width: 95%;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -86px;
+        display: block;
+        width: 100%;
+        height: 109px;
+        background: url('../img/wave-bottom.png') 0 0 no-repeat;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: -12px;
+        display: block;
+        width: 100%;
+        height: 109px;
+        background: url('../img/wave-top.png') 0 0 no-repeat;
+      }
+
+}
+
 .title.composition__title {
     max-width: 780px;
     margin-left: auto;
@@ -13,6 +54,10 @@
 .composition__wrap {
     display: flex;
     margin-top: 40px;
+
+    @include laptop {
+        margin-top: 20px;
+    }
 
     @include tablet {
         display: block;
@@ -30,7 +75,7 @@
         padding-right: 45px;
 
         @include desktop {
-            padding-right: 40px;
+            padding-right: 15px;
         }
 
         @include laptop {
@@ -47,7 +92,7 @@
         padding-left: 45px;
 
         @include desktop {
-            padding-left: 40px;
+            padding-left: 15px;
         }
 
         @include laptop {
@@ -115,6 +160,10 @@
         margin-left: 0;
         margin-right: 22px;
     }
+
+    @include phone {
+        margin-right: 15px;
+    }
 }
 
 .composition__item {
@@ -132,16 +181,28 @@
     &:not(:last-child) {
         margin-bottom: 30px;
 
-        @include big-tablet {
-            margin-bottom: 20px;
+        @include laptop {
+            margin-bottom: 15px;
+        }
+
+        @include tablet {
+            margin-bottom: 10px;
         }
 
         .composition__desc {
             padding-bottom: 25px;
             border-bottom: 1px solid #d2dce6;
 
-            @include big-tablet {
+            @include laptop {
                 padding-bottom: 10px;
+            }
+
+            @include tablet {
+                padding-bottom: 0;
+            }
+
+            @include phone {
+                padding-bottom: 5px;
             }
         }
     }
@@ -157,10 +218,6 @@
 
     @include laptop {
         width: 300px;
-    }
-
-    @include big-tablet {
-        padding: 0 0 0 5px;
     }
 
     @include tablet {
@@ -196,17 +253,21 @@
 .composition__item-pic {
     width: 175px;
 
-    @include big-tablet {
+    @include laptop {
         width: 100px;
     }
 
     @include tablet {
-        width: 175px;
+        width: 130px;
     }
 }
 
 .composition__item-pic_margined {
     margin-top: -40px;
+
+    @include laptop {
+        margin-top: -24px;
+    }
 }
 
 .composition__section_gel {
@@ -226,10 +287,6 @@
             padding: 0 10px 0 0;
         }
 
-        @include big-tablet {
-            padding: 0 5px 0 0;
-        }
-
         @include tablet{
             text-align: left;
         }
@@ -238,6 +295,10 @@
 }
 
 .composition__section_tablets {
+
+    @include tablet {
+        margin-top: 5px;
+    }
 
     .composition__item {
         flex-direction: row-reverse;
@@ -258,6 +319,7 @@
 
 .composition__footnote {
     position: relative;
+    z-index: 2;
     padding: 34px 38px 33px 90px;
     margin-top: 67px;
     border: 2px solid #d2dce6;
@@ -267,14 +329,11 @@
 
     @include laptop {
         padding: 25px 5px 10px;
-    }
-
-    @include big-tablet {
-        margin-top: 30px;
+        margin-top: 50px;
     }
 
     @include tablet {
-        margin-top: 5px;
+        margin-top: 29px;
     }
 }
 

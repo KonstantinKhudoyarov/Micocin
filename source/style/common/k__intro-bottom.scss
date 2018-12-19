@@ -1,4 +1,14 @@
 .intro_bottom {
+    padding-top: 25px;
+
+    @include desktop {
+        padding-bottom: 70px;
+        margin-bottom: 0;
+    }
+
+    &::after {
+        bottom: -72px;
+      }
 
     .logo {
         margin-right: 310px;

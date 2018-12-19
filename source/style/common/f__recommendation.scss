@@ -73,10 +73,12 @@
 
     @include laptop {
         padding-left: 10px;
+        padding-bottom: 60px;
     }
 
     @include tablet {
         padding-left: 0;
+        padding-bottom: 75px;
         max-width: none;
         width: 100%;
     }
@@ -94,8 +96,8 @@
     }
 
     @include laptop {
-        padding-bottom: 15px;
-        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     @include phone {
@@ -136,7 +138,7 @@
         }
 
         @include laptop {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         @include phone {

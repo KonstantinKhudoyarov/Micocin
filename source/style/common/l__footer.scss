@@ -1,16 +1,35 @@
 .footer {
     padding: 48px 0 65px;
+
+    @include desktop {
+        padding: 20px 0 30px;
+    }
+
+    @include tablet {
+        padding: 5px 0 25px;
+    }
 }
 
 .footer__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .footer__copyright {
     display: flex;
     align-items: center;
+}
+
+.footer__copyright-text {
+    
+    @include tablet {
+        display: none;
+    }
 }
 
 .footer__pic {
@@ -31,6 +50,17 @@
     text-align: center;
 }
 
+.footer__text_address {
+
+    @include tablet {
+        display: none;
+    }
+}
+
 .footer__inn {
     text-align: right;
+
+    @include tablet {
+        display: none;
+    }
 }

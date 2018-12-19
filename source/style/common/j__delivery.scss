@@ -1,5 +1,17 @@
 .delivery {
     counter-reset: bullet;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: -11px;
+        display: block;
+        width: 100%;
+        height: 109px;
+        background: url('../img/wave-top.png') 0 0 no-repeat;
+      }
+
 }
 
 .delivery__title {
@@ -13,6 +25,8 @@
 }
 
 .delivery__list {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     margin-top: 39px;

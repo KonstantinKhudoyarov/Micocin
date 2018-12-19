@@ -1,0 +1,36 @@
+.intro_bottom {
+    padding-top: 25px;
+
+    @include desktop {
+        padding-bottom: 70px;
+        margin-bottom: 0;
+    }
+
+    &::after {
+        bottom: -72px;
+      }
+
+    .logo {
+        margin-right: 310px;
+
+        @include desktop {
+            margin-right: 150px;
+        }
+
+        @include laptop {
+            margin-right: 0;
+        }
+    }
+
+    .intro__product-legs {
+        top: -56px;
+        left: -164px;
+
+        @include desktop {
+            width: 500px;
+            top: -3px;
+            left: -155px
+        }
+    }
+
+}

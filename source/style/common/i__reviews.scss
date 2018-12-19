@@ -1,3 +1,18 @@
+.reviews {
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    display: block;
+    width: 100%;
+    height: 109px;
+    background: url('../img/wave-bottom.png') 0 0 no-repeat;
+  }
+
+}
+
 .reviews-title {
   line-height: 1.1 !important;
   margin-bottom: 32px;

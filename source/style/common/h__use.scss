@@ -2,12 +2,28 @@
   background:  #f3f9ff;
 
   .btn-box {
-    width: 320px;
+    position: relative;
+    z-index: 2;
+    max-width: 320px;
     margin: 0 auto;
   }
 
   .btn {
-    padding: 9px 25px 6px 25px;
+    padding: 9px 25px 6px;
+  }
+
+  @include tablet {
+    .container {
+      max-width: 620px;
+    }
+  }
+
+  @include phone {
+
+    .btn {
+      padding: 9px 15px 6px;
+    }
+
   }
 
 }
@@ -15,11 +31,27 @@
 .use-title {
   margin-bottom: 25px;
   line-height: 1 !important;
+
+  @include laptop {
+    margin-bottom: 20px;
+  }
+
 }
 
 .use-wrap {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+
+  @include laptop {
+    max-width: 767px;
+    margin: 0 auto 30px;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
 .use-item {
@@ -30,6 +62,58 @@
   text-align: right;
   padding: 45px 65px 0 0;
   width: calc(50% - 251px);
+
+  @include desktop {
+    padding: 45px 60px 0 0;
+    width: calc(50% - 226px);
+
+    .use-list__item {
+
+      &:after {
+        right: -60px;
+      }
+
+    }
+
+  }
+
+  @include laptop {
+    padding: 10px 55px 0 0;
+    width: calc(50% - 135px);
+
+    .use-list__item {
+
+      &:after {
+        right: -55px;
+      }
+
+    }
+
+  }
+
+  @include tablet {
+    padding: 0 0 0 50px;
+    width: 50%;
+    //width: 230px;
+
+    text-align: left;
+    margin-bottom: 20px;
+
+    .use-list__item {
+
+      &:after {
+        right: inherit;
+        left: -50px;
+      }
+
+    }
+
+  }
+
+  @include phone {
+    width: 300px;
+  }
+
 }
 
 .use-item__center {
@@ -48,6 +132,75 @@
     width: 360px;
     top: 140px;
     left: 30px;
+  }
+
+  @include desktop {
+    margin: 0 65px;
+
+    .product-tab {
+      width: 310px;
+      top: 65px;
+      left: -40px;
+    }
+
+    .product-gel {
+      width: 340px;
+      left: 20px;
+      top: 160px;
+    }
+
+  }
+
+  @include laptop {
+    margin: 0 30px;
+
+    .product-tab {
+      width: 250px;
+      top: 65px;
+      left: -20px;
+    }
+
+    .product-gel {
+      max-width: 250px;
+      left: 20px;
+      top: inherit;
+      bottom: -10px;
+    }
+
+  }
+
+  @include tablet {
+    order: 1;
+    margin-top: 30px;
+
+    .product-tab {
+      width: 280px;
+      top: inherit;
+      bottom: 10px;
+      left: -70px;
+    }
+
+    .product-gel {
+      max-width: 290px;
+      left: 10px;
+    }
+
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .product-tab {
+      position: static;
+    }
+
+    .product-gel {
+      width: 260px;
+      bottom: -10px;
+      left: 30px;
+    }
   }
 
 }
@@ -76,10 +229,69 @@
       }
     }
 
+
   }
 
   .use-list__item + .use-list__item {
     margin-top: 60px;
+  }
+
+  @include desktop {
+    padding: 45px 0 0 60px;
+    width: calc(50% - 226px);
+
+    .use-list__item {
+
+      &:after {
+        left: -60px;
+      }
+
+    }
+
+  }
+
+  @include laptop {
+    padding: 10px 0 0 55px;
+    width: calc(50% - 135px);
+
+    .use-list__item + .use-list__item {
+      margin-top: 45px;
+    }
+
+    .use-list__item {
+
+      &:after {
+        left: -55px;
+      }
+
+    }
+
+
+  }
+
+  @include tablet {
+    padding: 0 0 0 55px;
+    //width: 230px;
+    width: 50%;
+
+    .use-list__item {
+
+      &:after {
+        left: -50px;
+      }
+
+    }
+
+
+    .use-list__item + .use-list__item {
+      margin-top: 20px;
+    }
+
+  }
+
+  @include phone {
+    padding: 0 0 0 50px;
+    width: 300px;
   }
 
 }
@@ -92,6 +304,15 @@
   font-weight: 700;
   margin-bottom: 30px;
   border-bottom: 5px solid #ff6b00;
+
+  @include laptop {
+    margin-bottom: 20px;
+  }
+
+  @include phone {
+    margin-bottom: 10px;
+  }
+
 }
 
 .use-list {
@@ -125,6 +346,38 @@
     counter-increment: section;
   }
 
+  @include desktop {
+
+  }
+
+  @include laptop {
+    font-size: 16px;
+
+    br {
+      display: none;
+    }
+
+    &:after {
+      width: 35px;
+      height: 35px;
+      border-width: 3px;
+      right: -55px;
+    }
+
+  }
+
+  @include phone {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+    &:after {
+      top: 50% !important;
+      transform: translate(0, -50%) !important;
+    }
+
+  }
+
 }
 
 .use-list__item + .use-list__item {
@@ -132,6 +385,18 @@
 
   &:before {
 
+  }
+
+  @include laptop {
+    margin-top: 40px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include phone {
+    margin-top: 15px !important;
   }
 
 }
@@ -156,13 +421,45 @@
     transform: translate(-50%, -50%);
   }
 
+  @include laptop {
+    width: 250px;
+    height: 250px;
+
+    &:before {
+      width: 200px;
+      height: 200px;
+    }
+
+  }
+
+  @include phone {
+    display: none;
+  }
+
 }
 
 .use-advice {
   text-align: center;
   color: #444444;
   font-size: 22px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+
+  @include desktop {
+    margin-bottom: 35px;
+  }
+
+  @include laptop {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include phone {
+    font-size: 18px;
+  }
+
 }
 
 .use-line {
@@ -184,6 +481,10 @@
     box-sizing: border-box;
     border-bottom: 1px solid #d2dce6;
     border-right: 1px solid #d2dce6;
+  }
+
+  @include laptop {
+    margin-bottom: 25px;
   }
 
   @include tablet {

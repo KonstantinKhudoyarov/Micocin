@@ -1,6 +1,13 @@
 .delivery {
     counter-reset: bullet;
 
+    &.block {
+
+        @include desktop {
+            padding-top: 0;
+        }
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -10,6 +17,10 @@
         width: 100%;
         height: 109px;
         background: url('../img/wave-top.png') 0 0 no-repeat;
+
+        @include tablet {
+            display: none;
+          }
       }
 
 }

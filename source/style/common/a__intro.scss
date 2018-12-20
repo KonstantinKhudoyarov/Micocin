@@ -15,14 +15,20 @@
     height: 109px;
     background: url('../img/wave-bottom.png') calc(50% + -30px) 0 no-repeat;
     transform: scaleX(-1);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   @include desktop {
     padding-bottom: 40px;
+    margin-bottom: 23px;
   }
 
   @include laptop {
     background-image: none;
+    margin-bottom: 0;
   }
 }
 
@@ -36,6 +42,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
   }
 
   @include phone {
@@ -200,7 +210,7 @@
   }
 
   @include desktop {
-    top: 380px;
+    top: 400px;
     left: -737px;
   }
 
@@ -263,6 +273,10 @@
 
 }
 
+.intro__tablets {
+  max-width: 364px;
+}
+
 .intro__pack-label {
   position: absolute;
   top: -11px;
@@ -317,7 +331,7 @@
   position: absolute;
   top: 134px;
   left: 106px;
-  max-width: none;
+  width: 415px;
 
   @include desktop {
     width: calc(421px - 37%);
@@ -339,7 +353,6 @@
 }
 
 .intro__pack-img_gel {
-  max-width: none;
 
   @include desktop {
     width: 100%;
@@ -405,6 +418,10 @@
     font-size: 34px;
     width: 100%;
     margin: 0 auto 20px;
+  }
+
+  @include phone {
+    font-size: 26px;
   }
 
 }
@@ -547,6 +564,9 @@
     font-size: 29px;
   }
 
+  @include phone {
+    font-size: 24px;
+  }
 }
 
 .intro__desc-text {
@@ -676,7 +696,7 @@
 }
 
 .form__currency {
-  font-size: 34px;
+  font-size: 22px;
 }
 
 .form__price-title {
@@ -686,7 +706,12 @@
 }
 
 .form__price-value {
-  padding: 0 11px;
+  padding: 0 1px;
+}
+
+.star {
+  vertical-align: top;
+  font-size: 18px;
 }
 
 .form__price-value_accent {
@@ -719,8 +744,22 @@
   background-image: url('../img/form-tel.svg');
 }
 
+.intro {
+
+  .btn-box {
+    margin: 15px 0 11px;
+  }
+}
+
+
+.form__main-footnote {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
 .form__lastpack {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 18px;
   text-align: center;
   line-height: 1;

@@ -1,9 +1,23 @@
 .recommendation.block {
     background-color: #f3f9ff;
+
+    @include tablet {
+        padding-top: 15px;
+    }
 }
 
-.recommendation__title {
+.recommendation__title.title-decor {
     margin-bottom: 48px;
+
+    &::before {
+        @include tablet {
+            top: -70px;
+        }
+    }
+
+    @include tablet {
+        margin-bottom: 15px;
+    }
 }
 
 .recommendation__subtitle {
@@ -13,6 +27,14 @@
     font-weight: 400;
     color: #383334;
     letter-spacing: -1px;
+
+    @include laptop {
+        font-size: 26px;
+    }
+
+    @include tablet {
+        font-size: 22px;
+    }
 }
 
 .recommendation__wrap {
@@ -78,7 +100,7 @@
 
     @include tablet {
         padding-left: 0;
-        padding-bottom: 75px;
+        padding-bottom: 0px;
         max-width: none;
         width: 100%;
     }

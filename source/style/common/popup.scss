@@ -1,7 +1,17 @@
 .ever-popup {
 
+    .ever-popup__inner {
+        margin: 10px auto !important;
+        padding-top: 0;
+
+        @include laptop {
+            margin: 40px auto !important;
+            padding-top: 35px;
+        }
+    }
+
     .ever-popup__close {
-        top: 55px;
+        top: 20px;
         right: 15px;
         width: 33px;
         height: 33px;
@@ -17,6 +27,14 @@
         width: 33px;
         height: 3px;
         background-color: #fd7532;
+    }
+
+    .btn-box {
+        margin: 15px 0 11px;
+    }
+
+    .form__main-footnote {
+        margin-bottom: 12px;
     }
 
 } 
@@ -72,7 +90,7 @@
 
 .pop-up__picture {
     position: absolute;
-    top: -45px;
+    top: -18px;
     left: -90px;
     width: 470px;
 }

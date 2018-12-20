@@ -106,16 +106,17 @@
                                     <div class="form__price-title color-text_black">новая цена</div>
                                     <div class="form__price-value form__price-value_accent">
                                         <span class="x_price_current form__prices font_black">459</span>
-                                        <span class="x_currency form__currency font_bold">₽</span>
+                                        <span class="x_currency form__currency font_bold">₽</span><span class="star">*</span>
                                     </div>
                                 </div>
                             </div>
                             <form class="form__main x_order_form" action="/submit" method="post">
-                                <input type="text" name="name" class="form__main-input form__main-name" placeholder="Имя" required>
-                                <input type="text" name="tel" class="form__main-input form__main-tel" placeholder="Телефон" required>
+                                <input type="text" name="name" class="form__main-input form__main-name" placeholder="Мое имя" required>
+                                <input type="text" name="tel" class="form__main-input form__main-tel" placeholder="Мой телефон" required>
                                 <div class="btn-box">
                                     <button type="submit" class="btn font_bold">Заказать <span class="small-text">со скидкой</span></button>
                                 </div>
+                                <div class="form__main-footnote">* при заказе курса</div>
                             </form>
                             <div class="form__lastpack">
                                 Осталось <span class="form__lastpack-accent font_medium lastpack">10</span> упаковок <br> со скидкой

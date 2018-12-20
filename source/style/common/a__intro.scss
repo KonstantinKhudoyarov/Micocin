@@ -210,7 +210,7 @@
   }
 
   @include desktop {
-    top: 380px;
+    top: 400px;
     left: -737px;
   }
 
@@ -696,7 +696,7 @@
 }
 
 .form__currency {
-  font-size: 34px;
+  font-size: 22px;
 }
 
 .form__price-title {
@@ -706,7 +706,12 @@
 }
 
 .form__price-value {
-  padding: 0 11px;
+  padding: 0 1px;
+}
+
+.star {
+  vertical-align: top;
+  font-size: 18px;
 }
 
 .form__price-value_accent {
@@ -739,8 +744,22 @@
   background-image: url('../img/form-tel.svg');
 }
 
+.intro {
+
+  .btn-box {
+    margin: 15px 0 11px;
+  }
+}
+
+
+.form__main-footnote {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
 .form__lastpack {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 18px;
   text-align: center;
   line-height: 1;

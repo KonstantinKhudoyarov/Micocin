@@ -1,11 +1,7 @@
 .footer {
-    padding: 48px 0 65px;
+    padding: 48px 0 48px;
 
     @include desktop {
-        padding: 20px 0 30px;
-    }
-
-    @include tablet {
         padding: 20px 0 20px;
     }
 }

@@ -1,6 +1,13 @@
 .delivery {
     counter-reset: bullet;
 
+    &.block {
+
+        @include desktop {
+            padding-top: 0;
+        }
+    }
+
     &::after {
         content: '';
         position: absolute;

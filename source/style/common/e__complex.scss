@@ -15,6 +15,14 @@
     }
   }
 
+  .border-green-big,
+  .border-orange-big {
+    &:after {
+      bottom: -2px;
+      z-index: 2;
+    }
+  }
+
 }
 
 .block.complex {
@@ -74,7 +82,7 @@
   font-weight: 700;
 
   span {
-    border-bottom: 5px solid #ff6b00;
+    //border-bottom: 5px solid #ff6b00;
   }
 
   @include desktop {
@@ -418,7 +426,7 @@
   .complex-item__title {
 
     span {
-      border-bottom: 5px solid #a7c93d;
+      //border-bottom: 5px solid #a7c93d;
     }
 
   }

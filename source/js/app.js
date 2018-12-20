@@ -23,10 +23,16 @@ $(".reviews-slider").slick({
         {
             breakpoint: 700,
             settings: {
+                slidesToScroll: 1,
                 slidesToShow: 1
             }
         }
     ]
+
+});
+
+$(".reviews-slider").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    $(".reviews-item").removeClass("active");
 });
 
 var addReviewsClass = function () {
@@ -34,7 +40,3 @@ var addReviewsClass = function () {
 }
 $(document).on('click', '.js-reviews-open', addReviewsClass);
 
-var removeReviewsClass = function () {
-    $('.reviews-item').removeClass('active');
-}
-$(document).on('click', '.js-reviews-arrow', removeReviewsClass);

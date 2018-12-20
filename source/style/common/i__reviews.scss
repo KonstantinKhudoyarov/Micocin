@@ -166,11 +166,23 @@
     }
   }
 
-  @include phone {
+  @include tablet {
 
     .slick-dots {
-      display: none !important;
 
+      &:before,
+      &:after{
+        display: none;
+      }
+
+    }
+
+  }
+
+  @include phone {
+
+    .slick-dots li {
+      margin: 0 3px;
     }
 
   }
@@ -196,7 +208,6 @@
   @include phone {
     top: 115px;
     z-index: 4;
-    cursor: none;
   }
 
 }

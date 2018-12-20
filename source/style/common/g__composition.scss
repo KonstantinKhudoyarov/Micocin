@@ -3,6 +3,10 @@
         padding-top: 0;
 
         @include tablet {
+            padding-top: 35px;
+        }
+
+        @include phone {
             padding-top: 30px;
         }
     }

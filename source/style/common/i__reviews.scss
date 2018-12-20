@@ -1,11 +1,4 @@
 .reviews {
-  &.block {
-    padding-top: 35px;
-
-    @include laptop {
-      padding-top: 15px;
-    }
-  }
 
   &::before {
     content: '';

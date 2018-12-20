@@ -2,7 +2,11 @@
     background-color: #f3f9ff;
 
     @include tablet {
-        padding-top: 15px;
+        padding-top: 23px;
+    }
+
+    @include phone {
+        padding-top: 18px;
     }
 }
 

@@ -6,6 +6,13 @@
   background-repeat: no-repeat;
   margin-bottom: 100px;
 
+  .container {
+
+    @include laptop {
+      max-width: 800px;
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -29,6 +36,14 @@
   @include laptop {
     background-image: none;
     margin-bottom: 0;
+  }
+
+  @include tablet {
+    padding-bottom: 35px;
+  }
+
+  @include phone {
+    padding-bottom: 30px;
   }
 }
 
@@ -408,7 +423,7 @@
 
   @include laptop {
     max-width: none;
-    width: 700px;
+    max-width: 700px;
     font-size: 39px;
     text-align: center;
     margin: 0 auto 25px;
@@ -416,7 +431,7 @@
 
   @include tablet {
     font-size: 34px;
-    width: 100%;
+    max-width: 500px;
     margin: 0 auto 20px;
   }
 
@@ -445,6 +460,13 @@
   justify-content: space-between;
   align-items: center;
   line-height: 1;
+
+  &:nth-child(2) {
+    
+    @include laptop {
+      margin-right: 5px;
+    }
+  }
 
   @include laptop {
     flex-direction: column;
@@ -576,7 +598,7 @@
   line-height: 1.1;
 
   @include laptop {
-    width: 250px;
+    width: 242px;
     font-size: 16px;
   }
 
@@ -724,24 +746,41 @@
   width: 100%;
   padding: 25px 25px 20px 55px;
   background-color: #eef2f7;
-  background-position: 21px 50%;
-  background-repeat: no-repeat;
   border-radius: 100px;
   border: none;
   outline: none;
-
-  &:not(:last-of-type) {
-    margin-bottom: 10px;
-  }
-
 }
 
 .form__main-name {
-  background-image: url('../img/form-name.svg');
+  position: relative;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    display: block;
+    width: 19px;
+    height: 23px;
+    background: url('../img/form-name.svg') 0 0 no-repeat;
+    // transform: translateX(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 .form__main-tel {
-  background-image: url('../img/form-tel.svg');
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 51%;
+    left: 37px;
+    display: block;
+    width: 21px;
+    height: 24px;
+    background: url('../img/form-tel.svg') 0 0 no-repeat;
+  }
 }
 
 .intro {
@@ -753,7 +792,7 @@
 
 
 .form__main-footnote {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
   font-size: 14px;
 }

@@ -25,7 +25,7 @@
                         <div class="form">
                             <div class="form__wrap">
                                 <div class="form__title">
-                                    Успейте заказать со скидкой <br> <span class="form__title-accent font_medium">до <span class="date-0" data-format="mm.dd.yyyy">10.09.2018</span></span>
+                                    Успейте заказать со скидкой <br> <span class="form__title-accent font_medium">до <span class="date-0" data-format="dd.mm.yyyy">10.09.2018</span></span>
                                 </div>
                                 <div class="form__price">
                                     <div class="form__price-old">
@@ -44,8 +44,12 @@
                                     </div>
                                 </div>
                                 <form class="form__main x_order_form" action="/submit" method="post">
-                                    <input type="text" name="name" class="form__main-input form__main-name" placeholder="Имя" required>
-                                    <input type="text" name="tel" class="form__main-input form__main-tel" placeholder="Телефон" required>
+                                    <div class="form__main-name">
+                                        <input type="text" name="name" class="form__main-input" placeholder="Мое имя" required>
+                                    </div>
+                                    <div class="form__main-tel">
+                                        <input type="tel" name="phone" class="form__main-input" placeholder="Мой телефон" required>
+                                    </div>
                                     <div class="btn-box">
                                         <button type="submit" class="btn font_bold">Заказать <span class="small-text">со скидкой</span></button>
                                     </div>

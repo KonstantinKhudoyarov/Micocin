@@ -1,5 +1,13 @@
 .intro_bottom {
-    padding-top: 30px;
+    padding-top: 40px;
+
+    @include tablet {
+        padding-top: 35px;
+    }
+
+    @include phone {
+        padding-top: 30px;
+    }
 
     .intro__header {
         padding-top: 0;
@@ -11,6 +19,10 @@
     }
 
     @include tablet {
+        padding-bottom: 35px;
+    }
+
+    @include phone {
         padding-bottom: 30px;
     }
 

@@ -77,14 +77,14 @@
                 <div class="intro__form">
                     <div class="intro__pack">
                         <div class="intro__pack-tablets">
-                            <div class="intro__pack-label font_black">299 <span class="intro__pacl-currency">₽</span></div>
+                            <div class="intro__pack-label font_black x_price_current">299 <span class="intro__pacl-currency x_currency">₽</span></div>
                             <div class="intro__tablets">
                                 <img src="img/product-pack-tab.png" alt="" class="intro__pack-img">
                             </div>
                             <img src="img/product-tablets.png" alt="" class="intro__pack-img intro__pack-img_tablets">
                         </div>
                         <div class="intro__pack-gel">
-                            <div class="intro__pack-label intro__pack-label_island font_black">299 <span class="intro__pacl-currency">₽</span></div>
+                            <div class="intro__pack-label intro__pack-label_island font_black x_price_current">299 <span class="intro__pacl-currency x_currency">₽</span></div>
                             <img src="img/product-gel.png" alt="" class="intro__pack-img intro__pack-img_gel">
                         </div>
                         <img src="img/product-stick.png" alt="" class="intro__pack-img intro__pack-img_stick">
@@ -92,7 +92,7 @@
                     <div class="form">
                         <div class="form__wrap">
                             <div class="form__title">
-                                Успейте заказать со скидкой <br> <span class="form__title-accent font_medium">до <span class="date-0" data-format="mm.dd.yyyy">10.09.2018</span></span>
+                                Успейте заказать со скидкой <br> <span class="form__title-accent font_medium">до <span class="date-0" data-format="dd.mm.yyyy">10.09.2018</span></span>
                             </div>
                             <div class="form__price">
                                 <div class="form__price-old">
@@ -111,8 +111,12 @@
                                 </div>
                             </div>
                             <form class="form__main x_order_form" action="/submit" method="post">
-                                <input type="text" name="name" class="form__main-input form__main-name" placeholder="Мое имя" required>
-                                <input type="text" name="tel" class="form__main-input form__main-tel" placeholder="Мой телефон" required>
+                                <div class="form__main-name">
+                                    <input type="text" name="name" class="form__main-input" placeholder="Мое имя" required>
+                                </div>
+                                <div class="form__main-tel">
+                                    <input type="tel" name="phone" class="form__main-input" placeholder="Мой телефон" required>
+                                </div>
                                 <div class="btn-box">
                                     <button type="submit" class="btn font_bold">Заказать <span class="small-text">со скидкой</span></button>
                                 </div>

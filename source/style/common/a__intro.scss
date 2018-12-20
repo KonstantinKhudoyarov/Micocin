@@ -226,7 +226,7 @@
 
   @include desktop {
     top: 400px;
-    left: -737px;
+    left: -730px;
   }
 
   @include laptop {
@@ -322,6 +322,7 @@
 
 .intro__pacl-currency {
   font-weight: normal;
+  font-size: 18px;
 }
 
 .intro__pack-img_tablets {
